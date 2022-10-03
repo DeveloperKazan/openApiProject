@@ -40,7 +40,6 @@ public class DeviceResources {
                     content = @Content),
             @ApiResponse(responseCode = "404", description = "Device not found",
                     content = @Content) })
-
     @GetMapping("/{id}")
     public Device findById(@Parameter(description = "device id to be searched") @PathVariable long id) {
         return repository.findById(id)
